@@ -1,0 +1,83 @@
+---
+// Blog preview section for showcasing recent blog posts on the homepage
+import { Image } from 'astro:assets';
+---
+
+<section id="blog" class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-2 text-center">Latest from the Blog</h2>
+    <p class="text-gray-600 dark:text-gray-400 text-center mb-10 max-w-lg mx-auto">Insights, tutorials and solutions from my journey as a developer.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- First blog post about flash session error messages -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+        <div class="relative h-52 overflow-hidden">
+          <Image 
+            src="/images/1st-post.jpg" 
+            alt="Laravel flash session errors" 
+            width={600} 
+            height={300} 
+            class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-5">
+            <span class="px-3 py-1 bg-blue-600/80 text-white text-xs font-medium rounded-full">Laravel</span>
+            <span class="text-white text-sm ml-2">April 25, 2023</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            Why flash session error message not showing?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            It happened to me many times. I end my method with redirect that has a message that should be flashed to the user but it does not show. Solution is simple, just make sure that there is no redirect is happening.
+          </p>
+          <a href="/blog/flash-session-error-not-showing" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:underline">
+            Read more 
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Second blog post about composer requirements error -->
+      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+        <div class="relative h-52 overflow-hidden">
+          <Image 
+            src="/images/2nd-blog.png" 
+            alt="Composer requirements error" 
+            width={600} 
+            height={300}
+            class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-5">
+            <span class="px-3 py-1 bg-indigo-600/80 text-white text-xs font-medium rounded-full">Composer</span>
+            <span class="text-white text-sm ml-2">April 24, 2023</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            Your requirements could not be resolved to an installable set of packages
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Today I was creating a new fresh Laravel project. After installing composer packages and removing others, I got an error about package conflicts. The solution was surprisingly simple.
+          </p>
+          <a href="/blog/composer-requirements-error" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:underline">
+            Read more 
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <a href="/blog" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        View All Posts
+      </a>
+    </div>
+  </div>
+</section>
